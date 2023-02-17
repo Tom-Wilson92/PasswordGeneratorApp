@@ -7,8 +7,7 @@ import android.view.View
 import android.widget.TextView
 import java.util.*
 import android.widget.EditText
-
-
+import java.security.SecureRandom
 
 
 class MainActivity : AppCompatActivity() {
@@ -28,11 +27,14 @@ class MainActivity : AppCompatActivity() {
         val passwordLength = passwordLengthEditText.text.toString().toIntOrNull() ?: 12
 
         val characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;':\",./<>?"
-        val random = Random()
-        val password = (1..passwordLength)
-            .map { characters[random.nextInt(characters.length)] }
-            .joinToString("")
+        val secureRandom = SecureRandom()
+        val sb = StringBuilder(passwordLength)
+        for (i in 0 until passwordLength) {
+            val randomIndex = secureRandom.nextInt(characters.length)
+            sb.append(characters[randomIndex])
+        }
 
-        passwordTextView.text = password
+        val passwordTextView = findViewById<TextView>(R.id.passwordTextView)
+        passwordTextView.text = sb.toString()
     }
 }

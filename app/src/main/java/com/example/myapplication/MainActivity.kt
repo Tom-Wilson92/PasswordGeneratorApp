@@ -29,6 +29,10 @@ class MainActivity : AppCompatActivity() {
 
     public fun generatePassword(view: View) {
         val passwordLength = passwordLengthEditText.text.toString().toIntOrNull() ?: 12
+        if (passwordLength > 32) {
+            passwordLengthEditText.error = "Password length must be 32 characters or less"
+            return
+        }
 
         val characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;':\",./<>?"
         val secureRandom = SecureRandom()

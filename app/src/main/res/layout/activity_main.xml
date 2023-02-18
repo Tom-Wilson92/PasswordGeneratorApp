@@ -18,7 +18,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.201" />
+
 
     <Button
         android:id="@+id/generateButton"
@@ -31,21 +33,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.721" />
-
+        app:layout_constraintVertical_bias="0.45" />
 
     <EditText
         android:id="@+id/passwordLengthEditText"
-        android:layout_width="413dp"
-        android:layout_height="61dp"
+        android:layout_width="264dp"
+        android:layout_height="50dp"
         android:autofillHints="Enter Password Length"
         android:hint="@string/enter_password_length"
         android:inputType="number"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.61" />
+        app:layout_constraintVertical_bias="0.318" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -65,13 +67,49 @@
     <Button
         android:id="@+id/copyButton"
         android:layout_width="135dp"
-        android:layout_height="62dp"
-        android:text="@string/copy_to_clipboard"
+        android:layout_height="64dp"
         android:onClick="copyToClipboard"
+        android:text="@string/copy_to_clipboard"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.992"
+        app:layout_constraintHorizontal_bias="0.025"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.611" />
+        app:layout_constraintVertical_bias="0.976" />
+
+    <CheckBox
+        android:id="@+id/checkBoxUpper"
+        android:layout_width="129dp"
+        android:layout_height="60dp"
+        android:text="@string/add_uppercase_letters"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.59" />
+
+    <CheckBox
+        android:id="@+id/checkBoxNumbers"
+        android:layout_width="129dp"
+        android:layout_height="60dp"
+        android:text="@string/add_numbers"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.722" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSymbols"
+        android:layout_width="129dp"
+        android:layout_height="60dp"
+        android:text="@string/add_special_characters"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.858" />
 </androidx.constraintlayout.widget.ConstraintLayout>

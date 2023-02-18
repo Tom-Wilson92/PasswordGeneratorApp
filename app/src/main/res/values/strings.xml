@@ -3,4 +3,7 @@
     <string name="generate_password_button_text">Generate Password</string>
     <string name="enter_password_length">Enter Password Length</string>
     <string name="copy_to_clipboard">Copy To Clipboard</string>
+    <string name="add_uppercase_letters">Add Uppercase Letters</string>
+    <string name="add_numbers">Add Numbers</string>
+    <string name="add_special_characters">Add Special Characters</string>
 </resources>

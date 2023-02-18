@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
-import java.util.*
 import android.widget.EditText
 import android.widget.Toast
 import java.security.SecureRandom
@@ -27,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         passwordLengthEditText = findViewById(R.id.passwordLengthEditText)
     }
 
-    public fun generatePassword(view: View) {
+    fun generatePassword(view: View) {
         val passwordLength = passwordLengthEditText.text.toString().toIntOrNull() ?: 12
         if (passwordLength > 32) {
             passwordLengthEditText.error = "Password length must be 32 characters or less"
@@ -46,7 +45,7 @@ class MainActivity : AppCompatActivity() {
         passwordTextView.text = sb.toString()
     }
 
-     fun copyToClipboard(view: View) {
+     fun copyToClipboard(view : View) {
         val clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
         val passwordTextView = findViewById<TextView>(R.id.passwordTextView)
 
